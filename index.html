@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <div class="app-wrapper">
+      <h1>🌤 Weather App</h1>
+
+      <div class="controls">
+        <select id="city-select">
+          <option value="">Chọn thành phố...</option>
+          <option value="new york">New York</option>
+          <option value="los angeles">Los Angeles</option>
+          <option value="chicago">Chicago</option>
+          <option value="paris">Paris</option>
+          <option value="tokyo">Tokyo</option>
+          <option value="london">London</option>
+        </select>
+        <button id="get-weather-btn">Xem thời tiết</button>
+      </div>
+
+      <div class="empty-state" id="empty-state">
+        <div class="empty-icon">🌈</div>
+        Chọn thành phố và nhấn "Xem thời tiết"
+      </div>
+
+      <div id="weather-container" style="display:none">
+        <div class="card-top">
+          <img id="weather-icon" alt="Weather icon">
+          <div class="location-block">
+            <div id="location"></div>
+            <div id="weather-main"></div>
+          </div>
+          <div id="main-temperature"></div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-label">🌡 Cảm giác như</div>
+            <div class="stat-value">
+              <span id="feels-like"></span><span class="unit">°</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">💧 Độ ẩm</div>
+            <div class="stat-value">
+              <span id="humidity"></span><span class="unit">%</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">💨 Gió</div>
+            <div class="stat-value">
+              <span id="wind"></span><span class="unit">m/s</span>
+            </div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-label">🌬 Gió giật</div>
+            <div class="stat-value">
+              <span id="wind-gust"></span><span class="unit">m/s</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,199 @@
+/* styles.css — Weather App, nature vibe */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #e8f5e2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  color: #1a3a1a;
+}
+
+/* ── App wrapper ─────────────────────────────── */
+.app-wrapper {
+  width: 100%;
+  max-width: 420px;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  color: #1a3a1a;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.3px;
+}
+
+/* ── Controls ────────────────────────────────── */
+.controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+}
+
+#city-select {
+  flex: 1;
+  height: 42px;
+  border: 1.5px solid #a8d5a2;
+  border-radius: 10px;
+  padding: 0 12px;
+  font-size: 14px;
+  font-family: inherit;
+  background: #ffffff;
+  color: #1a3a1a;
+  cursor: pointer;
+  outline: none;
+  transition: border-color .15s;
+}
+
+#city-select:focus {
+  border-color: #3a8f3a;
+  box-shadow: 0 0 0 3px rgba(58, 143, 58, 0.15);
+}
+
+#get-weather-btn {
+  height: 42px;
+  padding: 0 18px;
+  border-radius: 10px;
+  border: none;
+  background: #3a8f3a;
+  color: #ffffff;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .15s;
+}
+
+#get-weather-btn:hover {
+  background: #2e7030;
+}
+
+#get-weather-btn:active {
+  transform: scale(0.98);
+}
+
+#get-weather-btn:disabled {
+  background: #7aaa7a;
+  cursor: not-allowed;
+}
+
+/* ── Empty state ─────────────────────────────── */
+.empty-state {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: #4a7a4a;
+  font-size: 14px;
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1.5px dashed #a8d5a2;
+}
+
+.empty-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+/* ── Weather card ────────────────────────────── */
+#weather-container {
+  background: #ffffff;
+  border: 1.5px solid #a8d5a2;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Top section — forest green header */
+.card-top {
+  background: #2e7030;
+  padding: 1.5rem;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#weather-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  object-fit: contain;
+  padding: 4px;
+}
+
+.location-block {
+  flex: 1;
+}
+
+#location {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+#weather-main {
+  font-size: 13px;
+  color: #a8d8a8;
+  margin-top: 3px;
+  text-transform: capitalize;
+}
+
+#main-temperature {
+  font-size: 44px;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+#main-temperature::after {
+  content: "°";
+  font-size: 20px;
+  font-weight: 400;
+  color: #a8d8a8;
+  vertical-align: super;
+}
+
+/* Stats grid — 2 columns, separated by light green lines */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: #d4eccc;
+}
+
+.stat-card {
+  background: #ffffff;
+  padding: 14px 16px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: #5a8a5a;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a3a1a;
+}
+
+.stat-value .unit {
+  font-size: 12px;
+  font-weight: 400;
+  color: #7aaa7a;
+  margin-left: 2px;
+}
